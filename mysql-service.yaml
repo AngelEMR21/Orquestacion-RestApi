@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+  labels:
+    app: db
+    tier: backend
+spec:
+  ports:
+  - port: 3306
+    targetPort: 3306
+  selector:
+    app: db
+    tier: backend
+
